@@ -8,10 +8,9 @@ Computation of posterior edge appearance probabilities in a random tree.
 The function computes posterior edge appearance probabilities in a random tree from a (log-)weight matrix.
 The (log-)weight matrix can be obtained from one of the functions \code{lweights_multinomial}, \code{lweights_gaussian} or \code{weights_gausscopula}.
 The function can also account for prior edge appearance probability.
-Computation can be parallelized by setting \code{nbcores} to more than 2. Parallelization relies on \code{parallel}.
 }
 \usage{
-edge.prob(W, log = TRUE, account.prior = FALSE, q0 = 0.5, nbcores = 1)
+edge.prob(W, log = TRUE, account.prior = FALSE, q0 = 0.5)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -26,9 +25,6 @@ edge.prob(W, log = TRUE, account.prior = FALSE, q0 = 0.5, nbcores = 1)
 }
   \item{q0}{
 Desired prior edge appearance probability.
-}
-  \item{nbcores}{
-Number of cores to be used in parallelized computation.
 }
 }
 
